@@ -1,5 +1,26 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<Komis_aspnet_core_tutorial.Models.Samochod>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <h2>@ViewBag.Tytul</h2>
+
+    @foreach (var samochod in Model)
+    {
+        <div>
+            <h2>@samochod.Marka</h2>
+            <h2>@samochod.Model</h2>
+            <h3>@samochod.RokProdukcji</h3>
+            <h3>@samochod.Przebieg</h3>
+            <h4>@samochod.Pojemnosc</h4>
+            <h4>@samochod.Moc</h4>
+            <h5>@samochod.Cena.ToString("c")</h5>
+            <p>@samochod.Opis</p>
+        </div>
+    }
+
+</body>foreach
+</html>
