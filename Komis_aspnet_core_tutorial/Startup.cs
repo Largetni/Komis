@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Komis_aspnet_core_tutorial.Models;
 
 namespace Komis_aspnet_core_tutorial
 {
@@ -15,6 +16,7 @@ namespace Komis_aspnet_core_tutorial
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<ISamochodRepository, MockSamochodRepository>();
             services.AddMvc();
         }
 
