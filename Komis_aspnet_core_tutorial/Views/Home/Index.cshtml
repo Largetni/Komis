@@ -1,4 +1,9 @@
 ﻿@model IEnumerable<Komis_aspnet_core_tutorial.Models.Samochod>
+
+@{ 
+    Layout = "_Layout";
+}
+
 <h2>@ViewBag.Tytul</h2>
 
 @foreach (var samochod in Model)
