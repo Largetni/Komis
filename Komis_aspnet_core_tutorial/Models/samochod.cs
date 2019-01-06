@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Komis_aspnet_core_tutorial.Models
 {
-    public class samochod
+    public class Samochod
     {
         public int Id { get; set; }
         public string Marka { get; set; }
