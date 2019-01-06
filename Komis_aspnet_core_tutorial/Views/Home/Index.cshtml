@@ -1,8 +1,8 @@
-﻿@model IEnumerable<Komis_aspnet_core_tutorial.Models.Samochod>
+﻿@model Komis_aspnet_core_tutorial.ViewModels.HomeVM
 
 <h2>@ViewBag.Tytul</h2>
 
-@foreach (var samochod in Model)
+@foreach (var samochod in Model.Samochody)
 {
     <div>
         <h2>@samochod.Marka</h2>
