@@ -9,3 +9,12 @@
     padding-left:10px;
     padding-right:10px;
 }
+
+.caption {
+    padding: 9px;
+    color: #333
+}
+
+.line-breaks{
+    white-space:pre-line;
+}

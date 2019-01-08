@@ -1,14 +1,14 @@
 ﻿@model Komis_aspnet_core_tutorial.ViewModels.HomeVM
 
-<h2>@Model.Tytul</h2>
+<h2 class="line-breaks">@Model.Tytul</h2>
 
 @foreach (var samochod in Model.Samochody)
 {
     <div class="col-sm-4 col-lg-4 col-md-4">
-        <div class="thumbnail">
-            <img src="@samochod.MiniaturkaUrl" alt="" />
+        <div class="img-thumbnail">
+            <img class="img-thumbnail" src="@samochod.MiniaturkaUrl" alt="" />
             <div class="caption">
-                <h3 class="pull-right">@samochod.Cena.ToString("c")</h3>
+                <h3 class="p">@samochod.Cena.ToString("c")</h3>
                 <h3>
                     @samochod.Marka - @samochod.Model - @samochod.RokProdukcji
                 </h3>
