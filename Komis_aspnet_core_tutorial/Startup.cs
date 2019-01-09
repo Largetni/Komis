@@ -35,7 +35,12 @@ namespace Komis_aspnet_core_tutorial
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default", 
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
