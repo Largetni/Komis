@@ -28,6 +28,8 @@ namespace Komis_aspnet_core_tutorial.Migrations
 
                     b.Property<bool>("JestSamochodemTygodnia");
 
+                    b.Property<bool>("JestWCentrali");
+
                     b.Property<string>("Marka");
 
                     b.Property<string>("MiniaturkaUrl");

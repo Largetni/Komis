@@ -20,6 +20,7 @@ namespace Komis_aspnet_core_tutorial.Models
         public string ZdjecieUrl { get; set; }
         public string MiniaturkaUrl { get; set; }
         public bool JestSamochodemTygodnia { get; set; }
+        public bool JestWCentrali { get; set; }
 
     }
 }
