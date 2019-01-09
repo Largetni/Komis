@@ -35,7 +35,7 @@ namespace Komis_aspnet_core_tutorial
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc();
         }
     }
 }
