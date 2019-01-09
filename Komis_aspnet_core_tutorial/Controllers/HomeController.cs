@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Komis_aspnet_core_tutorial.Models;
+﻿using Komis_aspnet_core_tutorial.Models;
 using Komis_aspnet_core_tutorial.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
