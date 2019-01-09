@@ -3,16 +3,27 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="~/lib/bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet"/>
-    <link href="~/Content/site.css" rel="stylesheet"/> 
+    <link href="~/lib/bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/site.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <div>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <div >
+                    <ul class="nav nav-link active">
+                        <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">Komis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
     <div class="container body-content">
         <div class="row">
             @RenderBody()
         </div>
-       
+
     </div>
 </body>
 </html>
