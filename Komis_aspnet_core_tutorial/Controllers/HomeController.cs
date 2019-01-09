@@ -28,5 +28,15 @@ namespace Komis_aspnet_core_tutorial.Controllers
 
             return View(homeVM);
         }
+
+        public IActionResult Szczegoly(int id)
+        {
+            var samochod = _samochodRepository.PobierzSamochod(id);
+
+            if (samochod == null)
+                return NotFound();
+
+            return View(samochod);
+        }
     }
 }
