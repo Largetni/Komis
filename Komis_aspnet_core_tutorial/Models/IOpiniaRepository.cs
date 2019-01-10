@@ -7,5 +7,6 @@ namespace Komis_aspnet_core_tutorial.Models
 {
     public interface IOpiniaRepository
     {
+        void DodajOpinie(Opinia opinia);
     }
 }
