@@ -8,17 +8,17 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
+
+        <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-sm">
             <div class="container">
-                <div >
+                <div class="navbar-collapse collapse">
                     <ul class="nav nav-link active">
                         <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">Komis</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </div>
+
     <div class="container body-content">
         <div class="row">
             @RenderBody()
