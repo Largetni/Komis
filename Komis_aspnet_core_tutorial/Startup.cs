@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Komis_aspnet_core_tutorial.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
 
 namespace Komis_aspnet_core_tutorial
 {
@@ -25,6 +26,7 @@ namespace Komis_aspnet_core_tutorial
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
             services.AddTransient<ISamochodRepository, SamochodRepository>();
             services.AddTransient<IOpiniaRepository, OpiniaRepository>();
             services.AddMvc();
@@ -36,6 +38,7 @@ namespace Komis_aspnet_core_tutorial
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
