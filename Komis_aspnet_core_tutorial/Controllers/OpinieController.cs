@@ -20,5 +20,25 @@ namespace Komis_aspnet_core_tutorial.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Index(Opinia opinia)
+        {
+            if (ModelState.IsValid)
+            {
+                _opiniaRepository.DodajOpinie(opinia);
+                return RedirectToAction("OpiniaWyslana");
+            }
+
+            return View(opinia);
+
+        }
+
+        public IActionResult OpiniaWyslana()
+        {
+            return View();
+        }
+
+
     }
 }
