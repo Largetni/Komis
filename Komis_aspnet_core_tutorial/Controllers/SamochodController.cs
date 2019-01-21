@@ -14,6 +14,16 @@ namespace Komis_aspnet_core_tutorial.Controllers
 {
     public class SamochodController : Controller
     {
+        private readonly ISamochodRepository _samochodRepository;
+
+        private IHostingEnvironment _env;
+
+        public SamochodController(ISamochodRepository samochodRepository, IHostingEnvironment env)
+        {
+            _samochodRepository = samochodRepository;
+            _env = env;
+        }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
