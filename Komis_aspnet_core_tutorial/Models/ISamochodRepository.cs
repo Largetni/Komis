@@ -6,5 +6,11 @@ namespace Komis_aspnet_core_tutorial.Models
     {
         IEnumerable<Samochod> PobierzWszystkieSamochody();
         Samochod PobierzSamochod(int samochodId);
+
+        void DodajSamochod(Samochod samochod);
+
+        void EdytujSamochod(Samochod samochod);
+
+        void UsunSamochod(Samochod samochod);
     }
 }
