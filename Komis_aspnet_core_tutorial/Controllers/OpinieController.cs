@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Komis_aspnet_core_tutorial.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Komis_aspnet_core_tutorial.Controllers
 {
+    [Authorize]
     public class OpinieController : Controller
     {
         private readonly IOpiniaRepository _opiniaRepository;
