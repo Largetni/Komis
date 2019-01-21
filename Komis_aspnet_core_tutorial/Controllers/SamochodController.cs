@@ -26,7 +26,24 @@ namespace Komis_aspnet_core_tutorial.Controllers
 
         // GET: /<controller>/
         public IActionResult Index()
+        { 
+            return View(_samochodRepository.PobierzWszystkieSamochody());
+        }
+
+        public IActionResult Details(int id)
         {
+            var samochod = _samochodRepository.PobierzSamochod(id);
+            if (samochod==null)
+                return NotFound();
+
+            return View(samochod);
+        }
+
+        public IActionResult Create(string FileName)
+        {
+            if (!string.IsNullOrEmpty(FileName))
+                ViewBag.ImgPath = "/Images/" + FileName;
+            
             return View();
         }
     }
